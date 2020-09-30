@@ -10,26 +10,26 @@
 
 /*--------------------------------------------------------------------*/
 
-/* Return the length of the string                                    */
+/* Return the length of the string pcSrc                              */
 
-/* size_t Str_getLength(const char *pcSrc); */
-size_t Str_getLength(const char pcSrc[]);
-
-/*--------------------------------------------------------------------*/
-
-/* Copy a string to a specified location. Return the address of the   */
-/* first character of the copied string                               */
-
-/* char *Str_copy(char *pcDest, const char *pcSrc); */
-char *Str_copy(char pcDest[], const char pcSrc[]);
+size_t Str_getLength(const char *pcSrc);
+/* size_t Str_getLength(const char pcSrc[]); */
 
 /*--------------------------------------------------------------------*/
 
-/* Append a string to a specified string. Return the address of the   */
-/* first character of the destination string.                         */
+/* Copy string pcSrc to the location of pcDest. Return the address of */
+/* the first character of the copied string.                          */
 
-/* char *Str_concat(char *pcDest, const char *pcSrc); */
-char *Str_concat(char pcDest[], const char pcSrc[]);
+char *Str_copy(char *pcDest, const char *pcSrc);
+/* char *Str_copy(char pcDest[], const char pcSrc[]); */
+
+/*--------------------------------------------------------------------*/
+
+/* Append string pcSrc to string the end of pcDest. Return the address*/
+/* of the first character of the destination string pcDest.           */
+
+char *Str_concat(char *pcDest, const char *pcSrc);
+/* char *Str_concat(char pcDest[], const char pcSrc[]); */
 
 /*--------------------------------------------------------------------*/
 
@@ -37,16 +37,16 @@ char *Str_concat(char pcDest[], const char pcSrc[]);
 /* greater than zero if pcS1 is found, respectively, to be less than, */
 /* to match, or be greater than pcS2.                                 */
 
-/* int Str_compare(const char *pcS1, const char *pcS2); */
-int Str_compare(const char pcS1[], const char pcS2[]);
+int Str_compare(const char *pcS1, const char *pcS2);
+/* int Str_compare(const char pcS1[], const char pcS2[]); */
 
 /*--------------------------------------------------------------------*/
 
-/* Find the first occurrence of the substring needle in the string    */
-/* haystack. Return a pointer to the beginning of the substring, or   */
+/* Find the first occurrence of the substring pcNeedle in the string  */
+/* pcHaystack. Return a pointer to the beginning of the substring, or */
 /* NULL if the substring is not found.                                */
 
-/* char *Str_search(const char *pcHaystack, const char *pcNeedle); */
-char *Str_search(const char pcHaystack[], const char pcNeedle[]);
+char *Str_search(const char *pcHaystack, const char *pcNeedle);
+/* char *Str_search(const char pcHaystack[], const char pcNeedle[]); */
 
 #endif
