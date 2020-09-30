@@ -16,7 +16,20 @@ the assignment? COPY THE LIST of authorized sources of information
 given in the "Policies" web page to this section of the readme file,
 and edit it as appropriate.
 
+The course's lectures.
 
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. Such
+documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the armlab cluster.
+
+The course's current staff members outside of class time through Ed.
 
 ------------------------------------------------------------------------
 What unauthorized sources of information did you use to complete the
@@ -97,6 +110,11 @@ Is it possible for Str_copy or Str_concat to call assert to verify
 that the destination memory area specified by the caller is large
 enough? Explain.
 
-
+No, because the pointers or array destination pointers passed to the
+function does not contain any metadata about the length of the array or
+the memory area where the string is stored, only the address to where
+that memory area is. The check for the size of the destination memory
+area can only be performed in the client program where it has more
+information.
 
 ------------------------------------------------------------------------
